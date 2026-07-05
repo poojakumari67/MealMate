@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mealmate - Sign IN</title>
+
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    
+</head>
+<body> 
+    <h3>SIGN IN below:</h3>
+
+    <form action="{% url 'signin' %}" method="post">
+        {% csrf_token %}
+
+        <label>Username</label>
+        <input type="text" name="username">
+        <br><br>
+        <label>Password</label>
+        <input type="password" name="password">
+        <br><br>
+
+        <br><br>
+        <button type="submit">Sign In</button>
+        <br><br>
+        <a href="open_forgot_password">Forgot Password?</a>
+    </form>
+</div>
+
+</body>
+</html>  
